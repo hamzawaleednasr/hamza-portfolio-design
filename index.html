@@ -16,11 +16,9 @@
 
 </head>
 <body>
-    
 
-    <!-- Start Hero Section -->
-    <section class="hero">
-        <!-- Start navbar -->
+    <!-- Start navbar -->
+    <header>
         <nav>
             <div class="container">
                 <h2 class="name">
@@ -38,18 +36,23 @@
                 </div>
             </div>
         </nav>
-        <!-- End navbar -->
+    </header>
+    <!-- End navbar -->
+
+    <!-- Start Hero Section -->
+    <section class="hero">
         <!-- Start main text -->
         <div class="hero-main">
+            <div class="blur"></div>
             <div class="content">
                 <div class="states">
                     <span class="dot"></span>
                     <p>Available for hire</p>
                 </div>
                 <div class="main-title">
-                    <p>
-                        Front-End & .NET Specialist
-                    </p>
+                    <h1>
+                        <span class="first">Front-End &</span> <span class="last">.NET Specialist</span>
+                    </h1>
                 </div>
                 <div class="sub-title">
                     I build scalable, pixel-perfect web solutions bridging the gap between robust backend architecture and intuitive user interfaces.
@@ -64,6 +67,61 @@
     </section>
     <!-- End Hero Section -->
 
+    <!-- Start featured projects section -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="header">
+                <div class="text">
+                    <h2>Featured Projects</h2>
+                    <p>Selected works demonstrating full-stack capabilities.</p>
+                </div>
+                <a href="#" class="view-all">View all projects <i class="arrow_forward fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="projects-cards">
+                <div class="project-card">
+                    <div class="image first"><div class="black"></div></div>
+                    <div class="details">
+                        <h3 class="title">E-commerce Dashboard</h3>
+                        <p class="description">A comprehensive inventory management system with real-time analytics.</p>
+                        <div class="tags">
+                            <span class="tag">.NET Core</span>
+                            <span class="tag">React</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="image second"><div class="black"></div></div>
+                    <div class="details">
+                        <div class="text">
+                            <h3 class="title">FinTech API Gateway</h3>
+                            <p class="description">Secure microservices architecture handling high-volume transaction requests.</p>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="image third"><div class="black"></div></div>
+                    <div class="details">
+                        <div class="text">
+                            <h3 class="title">Corporate Portfolio</h3>
+                            <p class="description">High-performance static site with dynamic content loading and smooth animations.</p>
+                        </div>
+                        <div class="tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End featured projects section -->
 
 </body>
 </html>
