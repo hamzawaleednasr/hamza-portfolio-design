@@ -16,8 +16,11 @@ html {
     --border-color: rgb(37 51 70 / 1);
     --nav-text-color: #94A3B8;
     --hovered-nav-text-color:#F8FAFC;
+    --main-background-color: #1C293B;
+    --secondary-background-color: #1A2432;
     --main-blue-color: #2575E4;
     --main-muted-blue-color: #1A5BB5;
+    --secondary-color: #94A9C7;
 }
 body {
     font-family: 'Inter', sans-serif;
@@ -176,7 +179,7 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background-color: #1C293B;
+                background-color: var(--main-background-color);
                 border: 1px var(--border-color) solid;
                 border-radius: 18px;
                 padding: 5px 10px;
@@ -221,7 +224,7 @@ header {
 
             & .sub-title {
                 font-size: 20px;
-                color: #94A9C7;
+                color: var(--secondary-color);
                 margin-top: -20px;
                 margin-bottom: 45px;
                 line-height: 1.4;
@@ -332,7 +335,7 @@ header {
                 }
 
                 & p {
-                    color: #94A9C7;
+                    color: var(--secondary-color);
                     font-size: 16px;
                 }
 
@@ -358,7 +361,7 @@ header {
             gap: 30px;
 
             & .project-card {
-                background-color: rgb(26 36 50);
+                background-color: var(--secondary-background-color);
                 border: 1px var(--border-color) solid;
                 border-radius: 8px;
                 overflow: hidden;
@@ -417,7 +420,7 @@ header {
                         font-size: 20px;
                     }
                     & .description {
-                        color: #94A9C7;
+                        color: var(--secondary-color);
                         font-size: 14px;
                         line-height: 1.6;
                         margin-bottom: 15px;
@@ -461,6 +464,147 @@ header {
     }
 }
 /* End featured projects section */
+/* Start about me section */
+.about-me {
+    & .container {
+        margin: 0 auto;
+        padding: 60px 0;
+
+        & .about-me-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 150px;
+            background-color: var(--secondary-background-color);
+            border: 1px var(--border-color) solid;
+            border-radius: 16px;
+            padding: 45px;
+
+            & .content {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: column;
+
+                & h2.title {
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 36px;
+                    position: relative;
+                    margin-bottom: 30px;
+
+                    &::after {
+                        content: "";
+                        height: 4px;
+                        width: 55%;
+                        background-color: var(--main-blue-color);
+                        border-radius: 8px;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                    }
+
+                }
+
+                & .about-me-text {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    & span {
+                        display: block;
+                        color: var(--secondary-color);
+                        font-size: 18px;
+                        line-height: 1.625;
+                        margin-bottom: 15px;
+                    }
+
+                }
+
+                & .statics {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 20px;
+                    gap: 30px;
+
+                    & h4 {
+                        font-size: 30px;
+                        line-height: 36px;
+                        font-weight: 700;
+                        color: white;
+                        margin-bottom: 2px;
+                    }
+
+                    & p {
+                        text-transform: uppercase;
+                        color: var(--secondary-color);
+                        font-size: 14px;
+                    }
+
+                }
+
+            }
+
+            & .content + div {
+                background-image: linear-gradient(to bottom right, #253346 , #111821);
+                box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgb(0 0 0 / 0.25);
+                padding: 4px;
+                overflow: hidden;
+                width: 1500px;
+                aspect-ratio: 1 / 1;
+                position: relative; 
+                border-radius: 12px;
+
+                & .about-me-image {
+                    background-image: linear-gradient(to top right, rgb(37 117 228 / 0.2) , transparent);
+                    inset: 0px;
+                    z-index: 10;
+                    position: absolute;
+                }
+
+                & img {
+                    display: block;
+                    filter: grayscale(100%) contrast(1.25);
+                    object-fit: cover;
+                    border-radius: 12px;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                }
+
+            }
+
+        }
+
+    }
+}
+@media (max-width: 1000px) {
+    .about-me .container .about-me-card {
+        flex-direction: column-reverse;
+        gap: 60px;
+    }
+    .about-me .container .about-me-card .content + div {
+        max-width: 448px;
+        width: 100%;
+    }
+}
+@media (max-width: 1125px) {
+    .about-me .container {
+        padding: 72px 36px;
+    }
+}
+@media (max-width: 767px) {
+    .about-me .container {
+        padding: 72px 20px;
+    }
+    .about-me .header a {
+        display: none;
+    }
+}
+/* End about me section */
 /* Start animations */
 @keyframes off {
     0%, 100% {
