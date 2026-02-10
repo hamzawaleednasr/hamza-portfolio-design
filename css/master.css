@@ -274,13 +274,13 @@ header {
     /* End hero main section */
 }
 @media (max-width: 767px) {
-    .hero header nav {
+    header nav {
         padding: 12px 20px;
     }
-    .hero header nav .container i.bars {
+    header nav .container i.bars {
         display: block ;
     }
-    .hero header nav .container div.side-links {
+    header nav .container div.side-links {
         display: none;
     }
     .hero .hero-main .content .main-title h1 {
