@@ -11,12 +11,12 @@
 html {
     scroll-behavior: smooth;
 }
-:root {
+:root { 
     --muted-text-color: #64748B;
     --border-color: rgb(37 51 70 / 1);
     --nav-text-color: #94A3B8;
     --hovered-nav-text-color:#F8FAFC;
-    --main-background-color: #1C293B;
+    --main-background-color: #111821;
     --secondary-background-color: #1A2432;
     --main-blue-color: #2575E4;
     --main-muted-blue-color: #1A5BB5;
@@ -24,7 +24,7 @@ html {
 }
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #111821;
+    background-color: var(--main-background-color);
 }
 /* Start container */
 .container {
@@ -179,7 +179,7 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background-color: var(--main-background-color);
+                background-color: #1C293B;
                 border: 1px var(--border-color) solid;
                 border-radius: 18px;
                 padding: 5px 10px;
@@ -369,7 +369,7 @@ header {
 
                 &:hover {
                     border-color: rgb(37 117 228 / 0.5);
-                    box-sizing: 0 0 #0000, 0 0 #0000, 0 0 30px rgba(0,0,0,0.2);
+                    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 30px rgba(0,0,0,0.2);
 
                     & .image {
                         transform: scale(1.05);
@@ -605,6 +605,202 @@ header {
     }
 }
 /* End about me section */
+/* Start technical section */
+.tech {
+    & .container {
+        margin: 0 auto;
+        padding: 100px 0;
+
+        & h2.title {
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 48px;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        & .cat-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+
+            & .cat-box {
+                background-color: var(--secondary-background-color);
+                border: 1px var(--border-color) solid;
+                border-radius: 12px;
+                padding: 25px;
+
+                & .header {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    margin-bottom: 25px;
+
+                    & i {
+                        background-color: #1B2C44;
+                        color: var(--main-blue-color);
+                        font-size: 14px;
+                        line-height: 20px;
+                        padding: 10px;
+                        border-radius: 6px;
+                    }
+
+                    & h3 {
+                        color: white;
+                        font-size: 20px;
+                    }
+
+                }
+
+                & .tags {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 8px;
+
+                    & .tag {
+                        background-color: var(--main-background-color);
+                        color: white;
+                        font-size: 14px;
+                        padding: 8px 12px;
+                        border: 1px var(--border-color) solid;
+                        border-radius: 8px;
+                        transition: .3s;
+
+                        &:hover {
+                            border-color: rgb(37 117 228 / 0.5);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+@media (max-width: 1125px) {
+    .tech .container {
+        padding: 80px 36px;
+    }
+}
+@media (max-width: 767px) {
+    .tech .container {
+        padding: 80px 20px;
+    }
+}
+/* End technical section */
+/* Start contact section */
+.contact {
+    & .container {
+        margin: 0 auto;
+        padding: 60px 0;
+
+        & .box {
+            background-color: var(--main-blue-color);
+            padding: 64px 24px;
+            border-radius: 18px;
+            box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            background-image: linear-gradient(to right, #2575e4 , #1a5bb5);
+            overflow: hidden;
+            position: relative;
+
+            & .dot {
+                background-image: radial-gradient(#ffffff 1px, transparent 1px);
+                background-size: 24px 24px;
+                position: absolute;
+                inset: 0px;
+                opacity: 0.1;
+            }
+
+            & .content {
+                max-width: 660px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                gap: 26px;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 28px;
+
+                & h2.title {
+                    color: white;
+                    font-size: 36px;
+                    font-weight: 700;
+                    line-height: 46px;
+                }                
+
+                & p.mess {
+                    font-size: 18px;
+                    color: rgb(255 255 255 / 0.8);
+                }
+
+                & .buttons {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    & button {
+                        display: flex;
+                        justify-self: center;
+                        align-items: center;
+                        padding: 0 32px;
+                        border: none;
+                        outline: none;
+                        font-weight: 700;
+                        height: 48px;
+                        border-radius: 8px;
+                        margin-top: 20px;
+                        z-index: 10;
+                    }
+                    
+                    & .touch {
+                        cursor: pointer;
+                        background-color: rgb(249 250 251 / 1);
+                        color: var(--main-blue-color);
+                        box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                    }
+                    
+                    & .email {
+                        cursor: pointer;
+                        color: white;
+                        border: 1px rgb(255 255 255 / 0.2) solid;
+                        background-color: rgb(0 0 0 / 0.2);
+                        
+                        &:hover {
+                            background-color: rgb(0 0 0 / 0.3);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+}
+@media (max-width: 1125px) {
+    .contact .container {
+        padding: 80px 36px;
+    }
+}
+@media (max-width: 767px) {
+    .contact .container {
+        padding: 80px 20px;
+    }
+}
+@media (max-width: 640px) {
+    .contact .container .box .buttons {
+        flex-direction: column;
+    }
+}
+/* End contact section */
 /* Start animations */
 @keyframes off {
     0%, 100% {
