@@ -151,7 +151,8 @@ header {
         align-items: center;
 
         & .blur {
-            width: 600px;
+            max-width: 600px;
+            width: 100%;
             height: 600px;
             border-radius: 50%;
             background-color: rgb(37 117 228 / 0.1);
@@ -743,6 +744,7 @@ header {
                     display: flex;
                     align-items: center;
                     gap: 15px;
+                    margin-top: 20px;
 
                     & button {
                         display: flex;
@@ -754,7 +756,6 @@ header {
                         font-weight: 700;
                         height: 48px;
                         border-radius: 8px;
-                        margin-top: 20px;
                         z-index: 10;
                     }
                     
@@ -798,6 +799,9 @@ header {
 @media (max-width: 640px) {
     .contact .container .box .buttons {
         flex-direction: column;
+    }
+    .contact .container .box .buttons button {
+        width: 100%;
     }
 }
 /* End contact section */
